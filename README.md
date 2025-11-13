@@ -1,3 +1,8 @@
+This is a Vehicle Loan System designed for BOSSCAP to use for their employeees to create/edit/delete bookings to track vehicles in use. The application features modern tailwind UI, scaleability to add new vehicles as well as future proofing and an effecient system so that users get what they want.
+- Created by Aryan Vijay Anand
+
+--Next.js--
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
