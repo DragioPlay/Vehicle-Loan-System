@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Dispatch, SetStateAction, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from "react";
 
-// --- Helper functions ---
+{/*Gets all bookings for the calender*/}
 function getBookingsForDate(dateStr: string, bookings: any[], vehicles: any[], categoryFilter: 'ALL' | 'XLT' | 'PRO', searchTerm: string) {
   const lowerSearch = searchTerm.toLowerCase();
   return bookings.filter(b => {
@@ -20,6 +20,7 @@ function getBookingsForDate(dateStr: string, bookings: any[], vehicles: any[], c
   });
 }
 
+{/*Gets all booked dates for the vehicles*/}
 function getAllBookedDates(year: number, bookings: any[], vehicles: any[], categoryFilter: 'ALL' | 'XLT' | 'PRO', searchTerm: string) {
   const bookedDates = new Set<string>();
   const lowerSearch = searchTerm.toLowerCase();
@@ -70,7 +71,6 @@ function EditBookingModal({
   const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
-  // 🆕 Delete handler
   async function handleDelete() {
     try {
       setDeleting(true);
